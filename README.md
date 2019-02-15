@@ -6,7 +6,7 @@ unRAID Docker Templates for Docker images.
 
 ## Usage
 
-Firstly you need to be running unRAID ver 6.0.0 or later, once installed follow the instructions below:-
+Firstly you need to be running unRAID ver 6.0.0 or later, once installed follow the instructions below:
 
 1. Navigate to "Docker" tab and then the "Docker Repositories" sub-tab in the unRAID webui
 2. Enter in a URL of https://github.com/forcewake/unraid-docker-templates in the "Template repositories" field
