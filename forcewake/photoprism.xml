@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <TemplateURL>https://raw.githubusercontent.com/forcewake/unraid-docker-templates/master/forcewake/photoprism.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>MediaServer:Photo</Category>
+  <Name>photoprism</Name>
+  <Description>
+    PhotoPrism is a server-based application for browsing, organizing and sharing your personal photo collection. It makes use of the latest technologies to automatically tag and find pictures without getting in your way. Say goodbye to solutions that force you to upload your visual memories to the cloud or pay monthly fees.[br][br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/config[/b] This is where photoprism will store it's configuration file, database and logs.[br]
+    [b]/Pictures[/b] This is where photoprism will scan for photo files.[br][br]
+  </Description>
+  <Overview>
+    PhotoPrism is a server-based application for browsing, organizing and sharing your personal photo collection. It makes use of the latest technologies to automatically tag and find pictures without getting in your way. Say goodbye to solutions that force you to upload your visual memories to the cloud or pay monthly fees. 
+  </Overview>
+  <Registry>https://hub.docker.com/r/photoprism/photoprism</Registry>
+  <GitHub>https://github.com/photoprism/photoprism</GitHub>
+  <Repository>binhex/arch-libresonic</Repository>
+  <Project>https://github.com/photoprism/photoprism</Project>
+  <Deprecated>true</Deprecated>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>2342</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user</HostDir>
+      <ContainerDir>/Pictures</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:2342]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/forcewake/unraid-docker-templates/master/forcewake/images/photoprism-icon.png</Icon>
+  <ExtraParams></ExtraParams>
