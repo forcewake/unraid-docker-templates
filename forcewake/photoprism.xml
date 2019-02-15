@@ -58,4 +58,5 @@
   </Data>
   <WebUI>http://[IP]:[PORT:2342]/</WebUI>
   <Icon>https://raw.githubusercontent.com/forcewake/unraid-docker-templates/master/forcewake/images/photoprism-icon.png</Icon>
-  <ExtraParams></ExtraParams>
+<ExtraParams></ExtraParams>
+</Containers>
