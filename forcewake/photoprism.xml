@@ -15,7 +15,7 @@
   </Overview>
   <Registry>https://hub.docker.com/r/photoprism/photoprism</Registry>
   <GitHub>https://github.com/photoprism/photoprism</GitHub>
-  <Repository>binhex/arch-libresonic</Repository>
+  <Repository>photoprism/photoprism</Repository>
   <Project>https://github.com/photoprism/photoprism</Project>
   <Deprecated>true</Deprecated>
   <BindTime>true</BindTime>
