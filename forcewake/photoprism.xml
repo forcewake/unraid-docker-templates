@@ -8,7 +8,7 @@
     PhotoPrism is a server-based application for browsing, organizing and sharing your personal photo collection. It makes use of the latest technologies to automatically tag and find pictures without getting in your way. Say goodbye to solutions that force you to upload your visual memories to the cloud or pay monthly fees.[br][br]
     [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
     [b]/config[/b] This is where photoprism will store it's configuration file, database and logs.[br]
-    [b]/home/photoprism/Pictures/Originals photoprism/photoprism[/b] This is where photoprism will scan for photo files.[br]
+    [b]/home/photoprism/Pictures/Originals[/b] This is where photoprism will scan for photo files.[br]
     There won't be any search results until you start indexing your photos:
       [b]docker exec -ti photoprism photoprism index[/b]
     Photos will become visible one after another. You can watch the indexer working in the terminal.[br]
@@ -55,7 +55,7 @@
     </Volume>
     <Volume>
       <HostDir>/mnt/user</HostDir>
-      <ContainerDir>/home/photoprism/Pictures/Originals photoprism/photoprism</ContainerDir>
+      <ContainerDir>/home/photoprism/Pictures/Originals</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
