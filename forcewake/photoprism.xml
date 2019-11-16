@@ -52,7 +52,7 @@
     </Volume>
     <Volume>
       <HostDir>/mnt/user</HostDir>
-      <ContainerDir>/Pictures</ContainerDir>
+      <ContainerDir>/home/photoprism/Pictures/Originals photoprism/photoprism</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
