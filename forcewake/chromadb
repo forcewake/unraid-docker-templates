@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <TemplateURL>https://raw.githubusercontent.com/forcewake/unraid-docker-templates/master/forcewake/chromadb.xml</TemplateURL>
+  <Beta>True</Beta>
+  <Category>Databases:Vector</Category>
+  <Name>chromadb</Name>
+  <Description>
+    the AI-native open-source embedding database
+  </Description>
+  <Overview>
+    Chroma is the AI-native open-source vector database. Chroma makes it easy to build LLM apps by making knowledge, facts, and skills pluggable for LLMs.
+  </Overview>
+  <Registry>https://hub.docker.com/r/chromadb/chroma</Registry>
+  <GitHub>https://github.com/chroma-core/chroma</GitHub>
+  <Repository>chromadb/chroma</Repository>
+  <Project>https://github.com/chroma-core/chroma</Project>
+  <Deprecated>false</Deprecated>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8000</HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/forcewake/unraid-docker-templates/master/forcewake/images/chromadb-icon.png</Icon>
+<ExtraParams></ExtraParams>
+</Containers>
